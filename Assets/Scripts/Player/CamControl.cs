@@ -87,7 +87,7 @@ public class CamControl : MonoBehaviour
 
     public void WeaponSway()
     {
-        print(mouseX);
+        
         //Rotate weapon in direction of camera movement
         //weapon.transform.rotation = Quaternion.Euler()
     }
