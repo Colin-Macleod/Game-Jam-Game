@@ -21,18 +21,18 @@ public class DesireController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        print("collider hit");
-        if (other.gameObject.layer != windowLayer)
+        print(other.gameObject.layer);
+        if (other.gameObject.layer == 8)
         {
             //Increase happiness
             StartCoroutine("IncreaseHappiness");
-            print("start");
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.layer == windowLayer)
+        
+        if (other.gameObject.layer == 8)
         {
             //Increase happiness
             StopCoroutine("IncreaseHappiness");
@@ -44,7 +44,7 @@ public class DesireController : MonoBehaviour
         while(status.happiness < 1)
         {
             status.happiness += 0.1f;
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(1f);
         }
         
     }

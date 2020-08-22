@@ -22,6 +22,8 @@ public class WheelChair : MonoBehaviour
 
     public float divideSpeedBy = 10;
 
+    public Transform player; 
+
     private void Awake()
     {
         if (PlayerInputManager == null)
@@ -88,5 +90,10 @@ public class WheelChair : MonoBehaviour
             PlayerLogic.GrabWheelChair();
             
         }
+    }
+
+    void GrabPlayer()
+    {
+        //player.transform.parent = this.transform; 
     }
 }
