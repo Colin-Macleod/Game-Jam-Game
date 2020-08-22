@@ -4,9 +4,17 @@ ModelImporter:
   serializedVersion: 20101
   internalIDToNameTable:
   - first:
+      74: 5850626158361606097
+    second: rig|Cube.001Action
+  - first:
       74: -7361427651036151181
     second: rig|Idle
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: OldGuyTexture
+    second: {fileID: 2100000, guid: ac5ed3bfd8b480e4b980b9df5546ab8f, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
