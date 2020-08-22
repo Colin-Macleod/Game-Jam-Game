@@ -26,9 +26,6 @@ namespace Player
 
         private void Update()
         {
-            if (holdingWheelChair && PlayerInputManager.OtherInput.interactInstant)
-                ReleaseWheelChair();
-
             if (holdingWheelChair)
             {
                 PlayerControl.rb.position = GrabSocket.position;

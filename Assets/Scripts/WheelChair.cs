@@ -86,7 +86,7 @@ public class WheelChair : MonoBehaviour
 
     private void Update()
     {
-        if(interactPrevState == false && PlayerInputManager.OtherInput.interactInstant)
+        if(PlayerInputManager.OtherInput.interactInstant)
         {
             interactCurState = true;
         }
@@ -108,13 +108,16 @@ public class WheelChair : MonoBehaviour
         {
             print("Grab wheel chair");
             PlayerLogic.GrabWheelChair();
+            interactCurState = false;
+
         }
-        else if (interactCurState && PlayerLogic.holdingWheelChair)
+        if (interactCurState && PlayerLogic.holdingWheelChair)
         {
             print("Release wheel chair");
             PlayerLogic.ReleaseWheelChair();
+            interactCurState = false;
+
         }
-        interactCurState = false;
         interactPrevState = false;
 
     }
