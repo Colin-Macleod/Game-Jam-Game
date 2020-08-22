@@ -10,9 +10,16 @@ public class Status : MonoBehaviour
     public Slider sliderThirst;
     public Slider sliderSunlight;
 
+    public float hunger = 1;
+    public float thirst = 1;  
+    public float happiness = 1; 
 
+    private void Update()
+    {
+        SetStats(hunger, thirst, happiness);
+    }
 
-    public void SetHunger(int hunger, int thirst, int sun)
+    public void SetStats(float hunger, float thirst, float sun)
     {
 
         sliderHunger.value = hunger;
