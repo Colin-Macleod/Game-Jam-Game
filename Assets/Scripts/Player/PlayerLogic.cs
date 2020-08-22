@@ -12,6 +12,7 @@ namespace Player
         public PlayerInputManager PlayerInputManager;
         public WheelChair WheelChair;
 
+        public Transform GrabSocket; 
 
         public bool holdingWheelChair = false;
 
@@ -27,6 +28,11 @@ namespace Player
         {
             if (holdingWheelChair && PlayerInputManager.OtherInput.interactInstant)
                 ReleaseWheelChair();
+
+            if (holdingWheelChair)
+            {
+                PlayerControl.rb.position = GrabSocket.position;
+            }
         }
 
 
@@ -41,20 +47,21 @@ namespace Player
 
         public void GrabWheelChair()
         {
-            //previusTransform = this.transform.parent;
+            previusTransform = this.transform.parent;
             holdingWheelChair = true;
             //this.transform.parent = WheelChair.Rigidbody.transform;
+             
         }
 
         public void ReleaseWheelChair()
         {
-            //this.transform.parent = previusTransform;
+            this.transform.parent = previusTransform;
             holdingWheelChair = false;
         }
 
         public void Move(Vector3 move)
         {
-            PlayerControl.rb.MovePosition(PlayerControl.rb.position + move);
+            //PlayerControl.rb.MovePosition(PlayerControl.rb.position + move);
         }
     }
 }
