@@ -17,7 +17,7 @@ public class ClockAnimator : MonoBehaviour
     {
         DateTime currTime = DateTime.Now;
         TimeSpan elapsedT = currTime - startTime;
-        hourHand.localRotation = Quaternion.Euler(0f, 0f, (float)elapsedT.TotalMinutes * -360f/12f);
-        minuteHand.localRotation = Quaternion.Euler(0f, 0f, (float)elapsedT.TotalSeconds * -360f/60f);
+        hourHand.localRotation = Quaternion.Euler(0f, 0f, (float)elapsedT.TotalMinutes * 360f/12f);
+        minuteHand.localRotation = Quaternion.Euler(0f, 0f, (float)elapsedT.TotalSeconds * 360f/60f);
     }
 }

@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,12 +9,19 @@ public class Status : MonoBehaviour
     public Slider sliderThirst;
     public Slider sliderSunlight;
 
+    public float hunRate = 0.99f;
+    public float thirRate = 0.99f;
+    public float sunRate = 0.99f; //this value should be less than 1 and greater than 0 to decrease stats
+
     public float hunger = 1;
     public float thirst = 1;  
-    public float happiness = 1; 
+    public float happiness = 1;
 
     private void Update()
     {
+        hunger = hunger * hunRate;
+        thirst = thirst * thirRate;
+        happiness = happiness * sunRate;
         SetStats(hunger, thirst, happiness);
     }
 
