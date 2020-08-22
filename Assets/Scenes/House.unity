@@ -274,6 +274,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 72137515cb3dd944cb9f0d88e507a795, type: 3}
+--- !u!4 &263607984 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5529244940214903215, guid: f64ec9a451ca2754ba07bc490d7e9fe3, type: 3}
+  m_PrefabInstance: {fileID: 1556052999}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &318267214 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7987168617780770603, guid: 72137515cb3dd944cb9f0d88e507a795, type: 3}
@@ -1289,6 +1294,10 @@ PrefabInstance:
       propertyPath: WheelChair
       value: 
       objectReference: {fileID: 1078964610}
+    - target: {fileID: 4167002912724897382, guid: e2571b5df6e593b4c971d5a03e3be7fe, type: 3}
+      propertyPath: GrabSocket
+      value: 
+      objectReference: {fileID: 1757821251}
     - target: {fileID: 6157145267168509217, guid: e2571b5df6e593b4c971d5a03e3be7fe, type: 3}
       propertyPath: m_Name
       value: Player 1 (1)
@@ -1297,6 +1306,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6157145267168509219, guid: e2571b5df6e593b4c971d5a03e3be7fe, type: 3}
+      propertyPath: wheelChairCamTarget
+      value: 
+      objectReference: {fileID: 263607984}
     - target: {fileID: 6157145267168509228, guid: e2571b5df6e593b4c971d5a03e3be7fe, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.694
@@ -1955,6 +1968,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8519486738041881653, guid: f64ec9a451ca2754ba07bc490d7e9fe3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 8519486738041881657, guid: f64ec9a451ca2754ba07bc490d7e9fe3, type: 3}
       propertyPath: PlayerInputManager
       value: 
@@ -2147,6 +2164,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1757821251 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8636301312220799393, guid: f64ec9a451ca2754ba07bc490d7e9fe3, type: 3}
+  m_PrefabInstance: {fileID: 1556052999}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1785887297
 PrefabInstance:
   m_ObjectHideFlags: 0

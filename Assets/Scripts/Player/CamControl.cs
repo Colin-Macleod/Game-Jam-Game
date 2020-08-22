@@ -26,12 +26,18 @@ namespace Player
         public GameObject player;
         //public GameObject weapon;
 
+        public Transform wheelChairCamTarget;
+
+        private PlayerLogic playerLogic;
+
         private Animator gunAnim;
 
         // Start is called before the first frame update
         void Start()
         {
+
             player = GameObject.FindGameObjectWithTag("Player");
+            playerLogic = player.GetComponentsInChildren<PlayerLogic>()[0];
             Cursor.lockState = CursorLockMode.Locked;
             //gunAnim = weapon.GetComponent<Animator>();
         }
@@ -64,6 +70,7 @@ namespace Player
 
         void HandleInput()
         {
+
             mouseX = Input.GetAxisRaw("Mouse X");
             mouseY = Input.GetAxisRaw("Mouse Y");
 
@@ -77,12 +84,21 @@ namespace Player
             mouseLook += smoothVelocity;
             mouseLook.y = Mathf.Clamp(mouseLook.y, minAngle, maxAngle);
 
+            
+
         }
 
         void MoveCamera()
         {
-            cam.transform.localRotation = Quaternion.AngleAxis(-mouseLook.y, Vector3.right);
-            character.transform.localRotation = Quaternion.AngleAxis(mouseLook.x, character.transform.up);
+            if (playerLogic.holdingWheelChair)
+            {
+                cam.transform.LookAt(wheelChairCamTarget);
+            }
+            else
+            {
+                cam.transform.localRotation = Quaternion.AngleAxis(-mouseLook.y, Vector3.right);
+                character.transform.localRotation = Quaternion.AngleAxis(mouseLook.x, character.transform.up);
+            }
         }
 
         public void WeaponSway()

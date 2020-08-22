@@ -70,7 +70,6 @@ namespace Player
 
         public void MovePlayer(PlayerInputStructs.MovementInput moveInput)
         {
-
             //print($"input in moveplayer {moveInput.moveX}, {moveInput.moveZ} ");
             Vector3 camForward = cam.transform.forward;
             Vector3 camRight = cam.transform.right;
