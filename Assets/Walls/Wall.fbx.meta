@@ -7,8 +7,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: No Name
-    second: {fileID: 2100000, guid: c699fc7d29284dc4198c52fe215c4ab7, type: 2}
+      name: TrimMat
+    second: {fileID: 2100000, guid: 2c7c61e47bcd3f3479a8297797690a0a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WallMat
+    second: {fileID: 2100000, guid: 0092c562bb4d40c42bf545e05f562f1b, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
