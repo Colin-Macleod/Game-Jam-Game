@@ -790,15 +790,9 @@ MonoBehaviour:
   sliderHunger: {fileID: 1280528933}
   sliderThirst: {fileID: 532664251}
   sliderSunlight: {fileID: 704060353}
-<<<<<<< HEAD
-  hunRate: 0.01
-  thirRate: 0.01
-  sunRate: 0.01
-=======
   hunRate: 0.001
   thirRate: 0.001
   sunRate: 0.001
->>>>>>> 4914d5076b893851f229820796ed151d0eb3dcb7
   hunger: 1
   thirst: 1
   happiness: 1
