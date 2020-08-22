@@ -13,8 +13,8 @@ namespace Player
 
         public Rigidbody rb;
 
-        public float moveSpeed = 5;
-        public float airSpeed = 5;
+        public float moveSpeed = .2F;
+        public float airSpeed = 1;
 
 
         public Vector3 moveDir;
