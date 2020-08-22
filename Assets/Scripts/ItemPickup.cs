@@ -16,7 +16,7 @@ public class ItemPickup : MonoBehaviour
             this.transform.parent = GameObject.Find("Pickup").transform;
             isHolding = true;
         }
-        else if (isHolding == true)
+        else
         {
             this.transform.parent = null;
             isHolding = false;
