@@ -22,7 +22,10 @@ public class WheelChair : MonoBehaviour
 
     public float divideSpeedBy = 10;
 
-    public Transform player; 
+    public Transform player;
+
+    private bool interactCurState = false;
+    private bool interactPrevState = false;
 
     private void Awake()
     {
@@ -81,16 +84,41 @@ public class WheelChair : MonoBehaviour
         
     }
 
+    private void Update()
+    {
+        if(interactPrevState == false && PlayerInputManager.OtherInput.interactInstant)
+        {
+            interactCurState = true;
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        if(interactCurState == true && interactPrevState == true)
+        {
+            interactCurState = false;
+        }
+        interactPrevState = interactCurState;
+    }
 
     void OnTriggerStay(Collider other)
     {
-        if (PlayerInputManager.OtherInput.interactConstant && !PlayerLogic.holdingWheelChair)
+        
+        if (interactCurState && !PlayerLogic.holdingWheelChair)
         {
             print("Grab wheel chair");
             PlayerLogic.GrabWheelChair();
-            
         }
+        else if (interactCurState && PlayerLogic.holdingWheelChair)
+        {
+            print("Release wheel chair");
+            PlayerLogic.ReleaseWheelChair();
+        }
+        interactCurState = false;
+        interactPrevState = false;
+
     }
+
 
     void GrabPlayer()
     {
