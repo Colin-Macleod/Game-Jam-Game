@@ -43,8 +43,8 @@ public class DesireController : MonoBehaviour
     {   
         while(status.happiness < 1)
         {
-            status.happiness += 0.1f;
-            yield return new WaitForSeconds(1f);
+            status.happiness += 0.002f;
+            yield return new WaitForSeconds(0.0001f);
         }
         
     }

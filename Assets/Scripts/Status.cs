@@ -9,9 +9,9 @@ public class Status : MonoBehaviour
     public Slider sliderThirst;
     public Slider sliderSunlight;
 
-    public float hunRate = 0.001f;
-    public float thirRate = 0.001f;
-    public float sunRate = 0.001f; 
+    public float hunRate = 0.0002f;
+    public float thirRate = 0.0002f;
+    public float sunRate = 0.0002f; 
 
     public float hunger = 1;
     public float thirst = 1;  
