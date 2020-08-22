@@ -42,6 +42,8 @@ namespace Player
                 WheelChair.Move(PlayerInputManager.MovementInput);
             else
                 PlayerControl.MovePlayer(PlayerInputManager.MovementInput);
+
+            //print($"input {PlayerInputManager.MovementInput.moveX}, {PlayerInputManager.MovementInput.moveZ} ");
         }
 
 

@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,12 +9,19 @@ public class Status : MonoBehaviour
     public Slider sliderThirst;
     public Slider sliderSunlight;
 
+    public float hunRate = 0.001f;
+    public float thirRate = 0.001f;
+    public float sunRate = 0.001f; 
+
     public float hunger = 1;
     public float thirst = 1;  
-    public float happiness = 1; 
+    public float happiness = 1;
 
-    private void Update()
+    private void FixedUpdate()
     {
+        hunger = hunger - hunRate;
+        thirst = thirst - thirRate;
+        happiness = happiness - sunRate;
         SetStats(hunger, thirst, happiness);
     }
 
