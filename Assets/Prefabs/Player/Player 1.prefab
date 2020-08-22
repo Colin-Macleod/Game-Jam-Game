@@ -169,6 +169,8 @@ GameObject:
   - component: {fileID: 6157145267168509230}
   - component: {fileID: 6157145267168509218}
   - component: {fileID: 803939003042531769}
+  - component: {fileID: 3045973438331970266}
+  - component: {fileID: 4167002912724897382}
   m_Layer: 0
   m_Name: Player 1
   m_TagString: Player
@@ -233,7 +235,6 @@ MonoBehaviour:
   fallSpeed: 1
   jumpForce: 1
   grounded: 0
-  isJumping: 0
   gravityScale: 1
   weapon: {fileID: 0}
 --- !u!54 &6157145267168509230
@@ -362,3 +363,29 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &3045973438331970266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6157145267168509217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b582cd827b44afe94d29dea87985983, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4167002912724897382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6157145267168509217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 849e6245a8a14605b1433876697fa5f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerControl: {fileID: 6157145267168509229}
+  PlayerInputManager: {fileID: 3045973438331970266}
