@@ -11,7 +11,7 @@ public class Status : MonoBehaviour
 
     public float hunRate = 0.001f;
     public float thirRate = 0.001f;
-    public float sunRate = 0.001f; //this value should be less than 1 and greater than 0 to decrease stats
+    public float sunRate = 0.001f; 
 
     public float hunger = 1;
     public float thirst = 1;  
