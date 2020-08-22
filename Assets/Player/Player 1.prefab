@@ -227,8 +227,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 1841661440443845218}
   rb: {fileID: 6157145267168509230}
-  moveSpeed: 0.2
-  airSpeed: 0.1
+  moveSpeed: 1
+  airSpeed: 1
   moveDir: {x: 0, y: 0, z: 0}
   fallSpeed: 1
   jumpForce: 1

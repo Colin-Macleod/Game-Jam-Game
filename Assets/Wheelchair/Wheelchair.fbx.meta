@@ -2,8 +2,16 @@ fileFormatVersion: 2
 guid: 9814c8f473d2fbf49a22954fe4f832db
 ModelImporter:
   serializedVersion: 20101
-  internalIDToNameTable: []
-  externalObjects: {}
+  internalIDToNameTable:
+  - first:
+      74: -8515560403302317629
+    second: Cube.001|Cube.001Action
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WheelChairMat
+    second: {fileID: 2100000, guid: 3b1f5909301f4b341a60f3f05fc06853, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

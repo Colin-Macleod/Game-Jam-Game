@@ -4,6 +4,9 @@ ModelImporter:
   serializedVersion: 20101
   internalIDToNameTable:
   - first:
+      74: 5850626158361606097
+    second: rig|Cube.001Action
+  - first:
       74: -7361427651036151181
     second: rig|Idle
   externalObjects: {}

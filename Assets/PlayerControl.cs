@@ -95,6 +95,7 @@ public class PlayerControl : MonoBehaviour
     void MovePlayer()
     {
 
+
         //transform.Translate(moveDir * moveSpeed * Time.deltaTime);
         if (grounded)
         {
@@ -105,13 +106,13 @@ public class PlayerControl : MonoBehaviour
                 isJumping = false;
             }
 
-            rb.MovePosition(this.transform.position + (moveDir * moveSpeed));
+            rb.MovePosition(this.transform.position + (moveDir * (moveSpeed / 10)));
 
         }
         else if (!isJumping)
         {
             //if you're not jumping and you're not on the ground then you're just falling
-            rb.MovePosition(this.transform.position + (moveDir * airSpeed));
+            rb.MovePosition(this.transform.position + (moveDir * (airSpeed / 10)));
 
             Vector3 gravity = -9.81f * gravityScale * Vector3.up;
             rb.AddForce(gravity, ForceMode.Acceleration);
