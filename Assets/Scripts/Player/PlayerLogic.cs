@@ -10,15 +10,15 @@ namespace Player
         [Header("Dependencies")] 
         public PlayerControl PlayerControl;
         public PlayerInputManager PlayerInputManager;
-        public WheelChair WheelChair;
-        public Cup Cup;
-        public Pizza Pizza;
+        public WheelChair WheelChair; //??? 
+     //   public Cup Cup;
+     //   public Pizza Pizza;
 
         public Transform GrabSocket; 
 
         public bool holdingWheelChair = false;
-        public bool holdingCup = false;
-        public bool holdingPizza = false;
+      //  public bool holdingCup = false;
+      //  public bool holdingPizza = false;
 
         private Transform previusTransform;
         //public CamControl CamControl;
@@ -26,8 +26,8 @@ namespace Player
         private void Awake()
         {
             WheelChair = FindObjectOfType<WheelChair>();
-            Cup = FindObjectOfType<Cup>();
-            Pizza = FindObjectOfType<Pizza>();
+       //     Cup = FindObjectOfType<Cup>();
+       //     Pizza = FindObjectOfType<Pizza>();
         }
 
         private void Update()
