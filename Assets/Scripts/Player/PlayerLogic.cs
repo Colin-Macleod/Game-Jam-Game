@@ -18,6 +18,7 @@ namespace Player
 
         public bool holdingWheelChair = false;
         public bool holdingCup = false;
+        public bool holdingPizza = false;
 
         private Transform previusTransform;
         //public CamControl CamControl;
@@ -25,6 +26,8 @@ namespace Player
         private void Awake()
         {
             WheelChair = FindObjectOfType<WheelChair>();
+            Cup = FindObjectOfType<Cup>();
+            Pizza = FindObjectOfType<Pizza>();
         }
 
         private void Update()

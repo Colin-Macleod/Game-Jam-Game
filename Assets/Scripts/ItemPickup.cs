@@ -26,5 +26,5 @@ public class ItemPickup : MonoBehaviour
                 isHolding = false;
             }
         }
-
+    }
 }
