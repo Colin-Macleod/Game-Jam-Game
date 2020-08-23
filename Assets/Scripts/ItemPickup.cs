@@ -12,17 +12,19 @@ public class ItemPickup : MonoBehaviour
 
     private void Update()
     {
-        if (PlayerInputManager.OtherInput.interactInstant && isHolding == false)
+        if (PlayerInputManager.OtherInput.interactInstant)
         {
-            this.transform.position = objectUp.position;
-            this.transform.parent = GameObject.Find("Pickup").transform;
-            isHolding = true;
+            if (isHolding == false)
+            {
+                this.transform.position = objectUp.position;
+                this.transform.parent = GameObject.Find("Pickup").transform;
+                isHolding = true;
+            }
+            else
+            {
+                this.transform.parent = null;
+                isHolding = false;
+            }
         }
-        else if (PlayerInputManager.OtherInput.interactInstant && isHolding == true)
-        {
-            this.transform.parent = null;
-            isHolding = false;
-        }
-    }
 
 }

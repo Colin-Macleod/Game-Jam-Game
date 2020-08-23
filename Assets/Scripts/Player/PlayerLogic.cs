@@ -11,10 +11,13 @@ namespace Player
         public PlayerControl PlayerControl;
         public PlayerInputManager PlayerInputManager;
         public WheelChair WheelChair;
+        public Cup Cup;
+        public Pizza Pizza;
 
         public Transform GrabSocket; 
 
         public bool holdingWheelChair = false;
+        public bool holdingCup = false;
 
         private Transform previusTransform;
         //public CamControl CamControl;
